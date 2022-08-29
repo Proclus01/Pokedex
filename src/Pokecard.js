@@ -5,13 +5,11 @@ function Pokecard(props) {
         const inputString = input.toString();
         return String(inputString).padStart(3, '0');
       }
-    
-    const id = prepareId(props.id);
 
     return (
         <div className="card-container">
             <div className="image-container">
-                <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`} alt="" />
+                <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${prepareId(props.id)}.png`} alt="" />
             </div>
             <div className="card-body">
                 <h2>{props.name}</h2>
