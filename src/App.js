@@ -1,5 +1,5 @@
 import './App.css';
-import Pokecard from './Pokecard';
+import Pokegame from './Pokegame';
 
 const pokemon = [
   {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -12,17 +12,10 @@ const pokemon = [
   {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
 ];
 
-const prepareId = (input) => {
-  const inputString = input.toString();
-  return String(inputString).padStart(3, '0');
-}
-
 function App() {
-  const testId = prepareId(pokemon[0].id);
-  console.log(testId);
   return (
     <div className="App">
-      <Pokecard />
+      <Pokegame pokemon={pokemon} />
     </div>
   );
 }
