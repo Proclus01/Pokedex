@@ -11,10 +11,17 @@ const pokemonArray = [
     {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
   ];
 
+const testPokemon = pokemonArray[0];
+
 function Pokedex() {
     return (
         <div>
-            <Pokecard pokemonArray={pokemonArray} />
+            <Pokecard 
+                id={testPokemon.id} 
+                name={testPokemon.name} 
+                type={testPokemon.type} 
+                exp={testPokemon.base_experience}
+            />
         </div>
     )
 }
