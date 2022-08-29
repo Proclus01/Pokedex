@@ -15,12 +15,13 @@ function Pokedex() {
     return (
         <div>
             {pokemonArray.map(
-                item => <Pokecard 
-                id={item.id} 
-                name={item.name} 
-                type={item.type} 
-                exp={item.base_experience}
-            />
+                item => 
+                    <Pokecard key={item.name}
+                        id={item.id} 
+                        name={item.name} 
+                        type={item.type} 
+                        exp={item.base_experience}
+                    />
             )}
         </div>
     )
