@@ -18,3 +18,7 @@
 .card-body {
     font-size: 12px;
 }
+
+.card-container:hover {
+    background-color: gold;
+}
