@@ -9,15 +9,15 @@ function Pokecard(props) {
       }
     
     const testId = prepareId(pokemon[0].id);
-    const testName = prepareId(pokemon[0].name);
-    const testType = prepareId(pokemon[0].type);
-    const testExp = prepareId(pokemon[0].base_experience);
+    const testName = pokemon[0].name;
+    const testType = pokemon[0].type;
+    const testExp = pokemon[0].base_experience;
 
     return (
         <div className="card-container">
 
             <div className="image-container">
-                <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${testId}.png`} />
+                <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${testId}.png`} alt="" />
             </div>
 
             <div className="card-body">
