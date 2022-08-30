@@ -61,13 +61,27 @@ function Pokegame() {
     const firstHandTotal = total(firstHand);
     const secondHandTotal = total(secondHand);
 
+    // initialize winner or loser divs
+    const winner = (total) => {
+        return(<div>
+            <h2 style={{color: "green"}}>Winning Hand</h2>
+            <p>Total Experience: {total}</p>
+        </div>);
+    }
+    const loser = (total) => {
+        return(<div>
+            <h2 style={{color: "red"}}>Losing Hand</h2>
+            <p>Total Experience: {total}</p>
+        </div>);
+    }
+
     // if a certain hand has more or less base experience, 
     // then render a winner or loser div
-
-
     return (
         <div>
+            {firstHandTotal > secondHandTotal ? winner(firstHandTotal) : loser(firstHandTotal)}
             <Pokedex pokemonArray={firstHand} />
+            {secondHandTotal > firstHandTotal ? winner(secondHandTotal) : loser(secondHandTotal)}
             <Pokedex pokemonArray={secondHand} />
         </div>
     );
