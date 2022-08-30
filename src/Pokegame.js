@@ -57,6 +57,9 @@ function Pokegame() {
         return sum;
     }
 
+    // Alternative implementation with reduce
+    // const firstHandTotal = firstHand.reduce( (exp, pokemon) => { exp + pokemon.base_experience }, 0);
+
     // store the base experience
     const firstHandTotal = total(firstHand);
     const secondHandTotal = total(secondHand);
