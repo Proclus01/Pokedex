@@ -6,6 +6,9 @@ function Pokecard(props) {
         return String(inputString).padStart(3, '0');
       }
 
+    // Alternative implementation
+    // const padToThree (number) => (number <= 999 ? `00${number}`.slice(-3) : number)
+
     return (
         <div className="card-container">
             <div className="image-container">
