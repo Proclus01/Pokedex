@@ -1,6 +1,6 @@
 import Pokedex from './Pokedex';
 
-function Pokegame(props) {
+function Pokegame() {
     // initialize array
     const pokemonArray = [
         {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -12,8 +12,6 @@ function Pokegame(props) {
         {id: 94, name: 'Gengar', type: 'poison', base_experience: 225},
         {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
       ];
-
-    console.log(props.array)
 
     // initialize hands
     const firstHand = [];
