@@ -12,6 +12,17 @@ const pokemonArray = [
   ];
 
 function Pokegame(props) {
+
+    // initialize array
+    // shuffle array
+    // pop a pokemon from the array
+    // push 4 pokemon into first hand, second hand
+    // render each hand into a pokedex
+    // use a reduce method to sum up base experience
+    // if a certain hand has more or less base experience, 
+    // then render a winner or loser div
+
+
     return (
         <Pokedex pokemonArray={pokemonArray} />
     );
