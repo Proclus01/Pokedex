@@ -13,8 +13,39 @@ const pokemonArray = [
 
 function Pokegame(props) {
 
-    // initialize array
+    // initialize hands
+    const firstHand = [];
+    const secondHand = [];
+
+    // Draw a single pokemon
+    const drawPokemon = (hand, array) => {
+        const card = array.pop();
+
+        hand.push(card);
+    }
+
+    // Draw multiple pokemon
+    const drawMultiple = (hand, array, limit) => {
+        for (let i = 0; i < limit; i++) {
+            drawPokemon(hand, array);
+        }
+    }
+
+    // Shuffle the pokemon array
+    const shuffle = (array) => {
+        for (let i = 0; i < array.length - 1; i++) {
+
+            let j = Math.floor(Math.random() * (i + 1));
+
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
     // shuffle array
+    shuffle(pokemonArray);
+
+    
+    
     // pop a pokemon from the array
     // push 4 pokemon into first hand, second hand
     // render each hand into a pokedex
