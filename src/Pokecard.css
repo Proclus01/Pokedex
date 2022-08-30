@@ -8,6 +8,10 @@
     margin: 10px;
 }
 
+.card-body {
+    font-size: 12px;
+}
+
 .image-container {
     overflow: hidden;
     height: 200px;
@@ -15,10 +19,15 @@
     border-radius: 5px;
 }
 
-.card-body {
-    font-size: 12px;
-}
-
 .card-container:hover {
     background-color: gold;
+}
+
+.image-container img {
+    transition: all ease 500ms;
+}
+
+.image-container img:hover {
+    transform: scale(1.25);
+    opacity: 0.7;
 }
