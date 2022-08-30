@@ -13,6 +13,8 @@ function Pokegame(props) {
         {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
       ];
 
+    console.log(props.array)
+
     // initialize hands
     const firstHand = [];
     const secondHand = [];
@@ -48,10 +50,19 @@ function Pokegame(props) {
     drawMultiple(firstHand, pokemonArray, 3);
     drawMultiple(secondHand, pokemonArray, 3);
     
+    // sum up the base_experience in each hand
+    const total = (hand) => {
+        let sum = 0;
+        for (let i = 0; i < hand.length; i++) {
+            sum += hand[i].base_experience;
+        }
+        return sum;
+    }
 
+    // store the base experience
+    const firstHandTotal = total(firstHand);
+    const secondHandTotal = total(secondHand);
 
-
-    // use a reduce method to sum up base experience
     // if a certain hand has more or less base experience, 
     // then render a winner or loser div
 
